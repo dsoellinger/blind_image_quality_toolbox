@@ -13,7 +13,7 @@ function [ score ] = IQVG(img)
 	outSVMData(imgPre);
 	% conducted this in the cmd console
 	%svm-scale.exe -r scale_parameter f.txt > f_scaled.txt
-    system('svm-scale -r +iqvg/scale_parameter f.txt > f_scaled.txt')
+    system('/usr/local/Cellar/libsvm/3.22/bin/svm-scale -r +iqvg/scale_parameter f.txt > f_scaled.txt');
 	[~, f_scaled] = libsvmread('f_scaled.txt');
 	load('+iqvg/model.mat');
 	[predict_label, accuracy, dec_values] = svmpredict(-1, f_scaled, model, '-b 0');
