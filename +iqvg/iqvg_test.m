@@ -1,0 +1,1 @@
+score = IQVG( 'textImgs/img1.png')
