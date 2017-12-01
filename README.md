@@ -1,6 +1,13 @@
 # BLIND IMAGE QUALITY TOOLBOX
 This project is a collection of algorithms for Blind Image Quality assessment in Matlab.
 
+## Hint:
+- IQVG requires some Libsvm-Mex files which are available here: https://github.com/cjlin1/libsvm/tree/master
+  Don't forget to add the library to the path (see computeQualityMetrics.m)
+- DIIVINE requires a special version of Matlab which is available here: https://github.com/gregfreeman/libsvm/tree/new_matlab_interface
+  Don't forget to add the library to the path (see computeQualityMetrics.m)
+- Depending on your environment setup it might be necessary to modify the path to all libsvm executables (see IQVG.m, brisquescore.m)
+
 ## BIQAA
 Salvador Gabarda and Gabriel Cristóbal, "Blind image quality assessment through anisotropy," J. Opt. Soc. Am. A 24, B42-B51 (2007)
 
