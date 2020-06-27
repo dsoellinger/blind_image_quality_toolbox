@@ -1,10 +1,10 @@
 function [results] = computeQualityMetrics(image)
-    
+
     % Anisotrophy Test
     [gray,rgb] = biqaa.blindimagequality(image,8,6,0,'degree');
     results.biqaa_gray = gray;
     results.biqaa_rgb = rgb;
-    
+
     % BIQI Test
     results.biqi = biqi.biqi(image);
 
@@ -25,7 +25,8 @@ function [results] = computeQualityMetrics(image)
     rmpath('/Users/dsoellinger/Documents/git/uni/Matlab Toolbox/gregfreeman_libsvm/libsvm/matlab');
 
     % BRISQUE Test
+    % Requires libsvm 3.22. Make sure that it is installed.
     results.brisque = brisque.brisquescore(image);
-    
-    
+
+
 end

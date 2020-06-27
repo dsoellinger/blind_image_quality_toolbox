@@ -34,8 +34,8 @@ end
 fclose(fid);
 warning off all
 delete output test_ind_scaled dump
-system('/usr/local/Cellar/libsvm/3.22/bin/svm-scale -r +brisque/allrange test_ind >> test_ind_scaled');
-system('/usr/local/Cellar/libsvm/3.22/bin/svm-predict -b 1 test_ind_scaled +brisque/allmodel output >>dump');
+system('svm-scale -r +brisque/allrange test_ind >> test_ind_scaled');
+system('svm-predict -b 1 test_ind_scaled +brisque/allmodel output >>dump');
 
 load output
 qualityscore = output;
